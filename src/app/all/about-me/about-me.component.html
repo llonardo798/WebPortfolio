@@ -1,0 +1,26 @@
+@if (view) {
+<div class="app-about-me div-flex" id="about-me">
+    <div id="div-info">
+        <!-- <span [innerHTML]="icon"></span> -->
+        <p>Hola, soy</p>
+        <h1>LEONARDO AEDO JIMENEZ </h1> 
+        <p id="p-2">Desarrollador de Aplicaciones Web, Backend y Movil</p>
+        <div class="div-flex" id="div-butons">
+
+            <a href="docs/C.V. Leonardo Aedo.pdf" download>
+                <button class="btn-1 button-call-action">
+                    <img src="assets/icons/download.svg" alt="Download CV" class="icon" width="24px">
+                    &nbsp;&nbsp;Descargar CV
+                </button>
+            </a>
+            <button class="btn button-call-action" [routerLink]="['/contact']">
+                <img src="assets/icons/user.svg" alt="Contact whit me" class="icon" width="24px">
+                &nbsp;&nbsp;Contactame
+            </button>
+        </div>
+    </div>
+    <span class="tag-wrap">
+        <img src="assets/images/meBackOut2.png" alt="Me" class="img-fluid">
+    </span>
+</div>
+}

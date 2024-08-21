@@ -1,1 +1,211 @@
-/* You can add global styles to this file, and also import other style files */
+
+//Especificamos los colores que se utilizarán en la aplicación
+
+//Estos colores seran el modo dark que ira por defecto
+$mode-dark-primary-color: #0546ff
+$mode-dark-accent-color: #8514f5
+$mode-dark-dark-primary-color: #0c0011
+$mode-dark-light-primaty-color: #E0E0E0
+$mode-dark-text-icons: #FFFFFF
+$mode-dark-primary-text-color: #212121
+$mode-dark-divider-color: #1E293B
+$mode-dark-secondary-text-color: #727272
+$mode-dark-error: #fa2c05
+
+//Especificamos los colores que se utilizarán en la aplicación para el modo light
+$mode-light-primary-color: #05ff05
+$mode-light-accent-color: #ff05ff
+$mode-light-dark-primary-color: #FFFFFF
+$mode-light-light-primaty-color: #000000
+$mode-light-text-icons: #000000
+$mode-light-primary-text-color: #FFFFFF
+$mode-light-divider-color: #1E293B
+$mode-light-secondary-text-color: #727272
+$mode-light-error: #fa2c05
+
+// Mixin para aplicar tema
+@mixin apply-theme($primary-color, $accent-color, $dark-primary-color, $light-primary-color, $text-icons, $primary-text-color, $divider-color, $secondary-text-color, $error)
+    --primary-color: #{$primary-color}
+    --accent-color: #{$accent-color}
+    --dark-primary-color: #{$dark-primary-color}
+    --light-primary-color: #{$light-primary-color}
+    --text-icons: #{$text-icons}
+    --primary-text-color: #{$primary-text-color}
+    --divider-color: #{$divider-color}
+    --secondary-text-color: #{$secondary-text-color}
+    --error: #{$error}
+    --font-titel: Arial Black
+    --font-text: "Arial", "Inter", "Roboto", "sans-serif"
+
+:root
+    @include apply-theme($mode-dark-primary-color, $mode-dark-accent-color, $mode-dark-dark-primary-color, $mode-dark-light-primaty-color, $mode-dark-text-icons, $mode-dark-primary-text-color, $mode-dark-divider-color, $mode-dark-secondary-text-color, $mode-dark-error)
+
+.mode-light
+    @include apply-theme($mode-light-primary-color, $mode-light-accent-color, $mode-light-dark-primary-color, $mode-light-light-primaty-color, $mode-light-text-icons, $mode-light-primary-text-color, $mode-light-divider-color, $mode-light-secondary-text-color, $mode-light-error)
+
+@keyframes fade-out
+    0%
+        opacity: 1
+        transform: scale(1)
+
+    100%
+        opacity: 0
+        transform: scale(0)
+
+@keyframes clipPathAnimation
+    0%
+        clip-path: circle(0%)
+    100%
+        clip-path: circle(34% at 51% 34%)
+
+*
+    scrollbar-width: thin
+    scrollbar-color: var(--primary-color) #f1f1f100
+    overflow-x: hidden
+
+::-webkit-scrollbar
+    width: 8px
+    border-radius: 100px
+
+::-webkit-scrollbar-track
+    background: #f1f1f1
+    border-radius: 100px
+
+::-webkit-scrollbar-thumb
+    background: #888
+    border-radius: 100px
+    border: 6px solid rgba(0, 0, 0, 0.2)
+
+::-webkit-scrollbar-thumb:hover
+    background: #555
+
+body
+    background-color: var(--dark-primary-color)
+    color: var(--text-icons)
+    font-family: var(--font-text)
+    margin: 0
+
+//Estilos base para componentes div
+.div-flex
+    display: flex
+    align-items: center
+    flex-direction: row
+    flex-wrap: nowrap
+
+.header-open
+    width: 100%
+    height: 100%
+    background: #000000bd
+    top: 0px
+
+.title
+    font-size: 68px
+    font-family: var(--font-titel)
+    color: var(--primary-color)
+
+.sub-title
+    font-size: x-large
+    font-family: var(--font-text)
+    color: var(--accent-color)
+
+.button-call-action
+    background: var(--primary-color)
+    padding: 15px 25px 15px 22px
+    border: solid 0.1px var(--text-icons)
+    border-radius: 10px
+    margin: 20px
+    font-size: larger
+    font-weight: 600
+    display: flex
+    justify-content: center
+    align-items: center
+    color: var(--text-icons)
+    box-shadow: 0px 2px 15px 7px #ffffff2b
+    -webkit-transition: background-color 300ms ease-out
+    -moz-transition: background-color 300ms ease-out
+    -o-transition: background-color 300ms ease-out
+    transition: background-color 300ms ease-out
+
+.pointer
+    cursor: pointer
+
+.icon-tec
+    width: 70px
+    height: 70px
+    // filter: invert(13%) sepia(84%) saturate(7387%) hue-rotate(230deg) brightness(106%) contrast(102%)
+    filter: invert(16%) sepia(73%) saturate(7488%) hue-rotate(271deg) brightness(95%) contrast(105%)
+    display: inline-block
+    margin: 1em 0.5em
+    padding: .25em 0.5em
+
+#home-anim
+    position: fixed
+    top: 0
+    z-index: -10
+    width: 100%
+    object-fit: contain
+
+#home
+    clip-path: url(#cache)
+    clip-path: url(#cache)
+
+#red
+    fill: none
+    opacity: 0.15
+    stroke: #8514f5
+    stroke-width: 12
+    stroke-miterlimit: 10
+    animation: show 4s
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+
+#blue
+    fill: none
+    opacity: 0.15
+    stroke: #0546ff
+    stroke-width: 12
+    stroke-miterlimit: 10
+    animation: show 4s
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+
+#light-blue
+    fill: none
+    opacity: 0.15
+    stroke: #4879ff
+    stroke-width: 6
+    stroke-miterlimit: 10
+    stroke-dasharray: 200
+    stroke-dashoffset: 800
+    animation: draw 4s
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+
+@keyframes draw
+    to
+        stroke-dashoffset: 0
+
+@keyframes show
+    0%
+        opacity: 0.15
+
+    50%
+        opacity: 0.2
+
+    100%
+        opacity: 0.15
+
+h1, h2, h3, span, p, div
+    user-select: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+@media (max-width: 976px)
+    app-header
+        position: fixed
+        z-index: 99
+        top: 20px

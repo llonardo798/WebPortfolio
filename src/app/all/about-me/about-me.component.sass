@@ -1,0 +1,82 @@
+.app-about-me
+    opacity: 0
+    display: flex
+    justify-content: space-around
+    min-height: 90vh
+
+.img-fluid
+    width: 41vh
+    border-radius: 28px
+    box-shadow: inset 0px -20px 4px 8px var(--accent-color)
+
+#div-info
+    margin: 0px 0px 0px 0px
+    max-width: 48%
+
+h1
+    font-family: var(--font-titel)
+    font-size: 5vw
+    background: var(--primary-color)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    margin: 0px 0px 15px 0px
+
+p
+    font-size: 1.7rem
+    font-weight: 100
+    margin: 0px
+
+#p-2
+    line-height: 50px
+
+.btn-1
+    margin-left: 0px
+
+button:hover
+    background: var(--accent-color)
+    cursor: pointer
+
+a
+    text-decoration: none
+
+#div-butons
+    margin-top: 60px
+
+@media (max-width: 910px)
+    .img-fluid
+        width: 36vh
+        margin-top: -4vh
+        animation: clipPathAnimation 500ms ease forwards
+
+    .tag-wrap
+        height: 36vh
+        overflow: hidden
+
+    .app-about-me
+        flex-direction: column-reverse
+        margin: 0px 11%
+        min-height: 68vh
+        margin: 50px 50px 0px 50px
+
+    #div-info
+        margin-top: 50px
+        text-align: -webkit-center
+        max-width: none
+        width: 100%
+
+    .btn-1
+        min-width: 210px
+        margin-left: 0px
+
+    button
+        margin: 10px
+
+    #div-butons
+        flex-direction: column
+        margin-top: 30px
+    h1
+        font-size: 42px
+
+@media (max-width: 355px)
+    .app-about-me
+        margin: 0px 0px

@@ -1,0 +1,54 @@
+@if (view) {
+<div class="main-projects">
+    <div class="div-title-project">
+        <h1 class="title">Proyectos</h1>
+        <select (change)="onFilterChange($event.target)" class="button-call-action">
+            <option value="Main">Principales</option>
+            <option *ngFor="let technology of technologies" [value]="technology[0]">{{technology[0]}}</option>
+            <option value="All" selected>Todos</option>
+        </select>
+    </div>
+    <div class="div-flex div-projects">
+        @for (project of projects | filterProjects:filteredProjectIds; track $index) {
+        <div class="card-proyect" id="project-{{project.id}}">
+            <div class="container">
+                <div (click)="openDescription(project)">
+                    @if(project.imagePaths.length > 1 && project.imagePaths[1]){
+                    @for (image of project.imagePaths; track $index) {
+                    <img [src]="image" alt="project {{project.name}}" class="project-image img-multiple pointer" id="img-project-{{project.id}}-{{$index}}">
+                    }
+                    } @else {
+                    <img [src]="project.imagePaths[0]" alt="project {{project.name}}" class="project-image pointer"
+                        style="width: 100%;" id="img-project-{{project.id}}">
+                    }
+                </div>
+                <div (click)="openDescription(project)" class="div-info-project pointer">
+                    <h2 class="sub-title">{{project.name}}</h2>
+                    <p id="desc-project-{{project.id}}" >{{project.description}}</p>
+                </div>
+                <div class="div-mat">
+                    <div class="div-flex" id="divTecnologies">
+                        <div *ngFor="let technology of project.technologies" class="tecnologies">
+                            <span>
+                                <img [src]="'assets/icons/' + searchIcon(technology)" class="icon-tecnology">
+                                {{technology}}
+                            </span>
+                        </div>
+                        @if(project.publicUrl) {
+                        <div class="div-links">
+                            <a [href]="project.publicUrl" target="_blank">
+                                <img src="assets/icons/link.svg" class="icon-tecnology">
+                                Ver
+                            </a>
+                        </div>
+                        } 
+                    </div>
+                    <div class="div-flex" id="divLink">
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+}

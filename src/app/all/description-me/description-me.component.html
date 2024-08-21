@@ -1,0 +1,85 @@
+<div class="div-flex">
+    <div class="div-employment-info">
+        <div class="div-flex">
+            <div class="div-info">
+                <span class="title">+6 </span>
+                <span class="sub-title-2">Años de</span>
+                <span class="sub-title">Experiencia en desarrollo</span>
+            </div>
+            <div class="div-info">
+                <span class="title">+20 </span>
+                <span class="sub-title-2">Proyectos </span>
+                <span class="sub-title">Creados o dirigidos</span>
+            </div>
+        </div>
+        <div class="div-icons">
+
+            <div class="tooltip-container">
+                <span class="tooltip-text">Android</span>
+                <img src="assets/icons/android.svg" alt="Android" class="icon-tec">
+            </div>
+            @if (isSmallScreen) {
+            <div class="tooltip-container">
+                <span class="tooltip-text">Ionic</span>
+                <img src="assets/icons/ionic.svg" alt="Ionic" class="icon-tec">
+            </div>
+            }
+            <div class="tooltip-container">
+                <span class="tooltip-text">Java</span>
+                <img src="assets/icons/java.svg" alt="Java" class="icon-tec">
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">Spring</span>
+                <img src="assets/icons/spring.svg" alt="Spring" class="icon-tec">
+            </div>
+            @if (isSmallScreen) {
+            <div class="tooltip-container">
+                <span class="tooltip-text">Node JS</span>
+                <img src="assets/icons/nodejs.svg" alt="Node JS" class="icon-tec">
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">SQL</span>
+                <img src="assets/icons/sql.svg" alt="SQL" class="icon-tec">
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">Electron</span>
+                <img src="assets/icons/electron.svg" alt="Electron" class="icon-tec">
+            </div>
+            }
+            <div class="tooltip-container">
+                <span class="tooltip-text">Git</span>
+                <img src="assets/icons/git.svg" alt="Git" class="icon-tec">
+            </div>
+            <!-- 8 CANTIDADES -->
+            <div class="tooltip-container">
+                <span class="tooltip-text">Angular</span>
+                <img src="assets/icons/angular.svg" alt="Angular" class="icon-tec">
+            </div>
+            @if (isSmallScreen) {
+            <div class="tooltip-container">
+                <span class="tooltip-text">HTML</span>
+                <img src="assets/icons/html.svg" alt="HTML" class="icon-tec">
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">CSS</span>
+                <img src="assets/icons/css.svg" alt="CSS" class="icon-tec">
+            </div>
+            <div class="tooltip-container">
+                <span class="tooltip-text">JavaScript</span>
+                <img src="assets/icons/js.svg" alt="JS" class="icon-tec">
+            </div>
+            }
+            <div class="tooltip-container">
+                <span class="tooltip-text">TypeScript</span>
+                <img src="assets/icons/typescript.svg" alt="TypeScript" class="icon-tec">
+            </div>
+        </div>
+        <div class="more-tecnologi">
+            @if (widthScreen == 0) {
+                <span class="sub-title pointer" (click)="changeWidthScreen(widthScreenStart)">Ver menos tecnologias</span>
+            } @else {
+                <span class="sub-title pointer" (click)="changeWidthScreen(0)">¡Ver todas las tecnologias!</span>
+            }
+        </div>
+    </div>
+</div>
