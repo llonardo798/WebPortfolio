@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  view = true;
+  
+  searchWeight(): number {
+    return window.innerWidth;
+  }
 }

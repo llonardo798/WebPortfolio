@@ -9,7 +9,9 @@ import { Component, ElementRef } from '@angular/core';
 export class AppComponent {
   title = 'WebPortfolio';
   sideBarOpen = false;
-  backgroundInit = false;
+  //TODO - Reactive variable
+  // backgroundInit = false;
+  backgroundInit = true;
 
   constructor(private elementRef: ElementRef) { }
 

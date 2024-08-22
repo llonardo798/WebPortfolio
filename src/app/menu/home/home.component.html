@@ -1,1 +1,81 @@
-<app-description-me></app-description-me>
+@if (view) {
+<!-- <div class="content"> -->
+<div class="background">
+    <div class="main">
+        <div id="div-main-1">
+            <h1 class="title">Desarrollo de software a la medida </h1>
+        </div>
+        <div class="div-img-init">
+            <img src="assets/images/world.png" class="img-init">
+        </div>
+    </div>
+    <div class="div-flex">
+        <div id="span-1">
+            <h3>Aplicaciones web</h3>
+        </div>
+        <div id="span-3">
+            <h3>Software a medida</h3>
+        </div>
+        <div id="span-2">
+            <h3>Aplicaciones moviles</h3>
+        </div>
+    </div>
+</div>
+<!-- <div id="div-main-2">
+        </div> -->
+<!-- </div> -->
+<div class="content-2">
+    <div id="div-text-2">
+        <h2>Supera los Límites, <span>Impulsa tu Negocio</span></h2>
+
+        <h3>En un mundo digital en constante evolución, no basta con seguir el ritmo. <span>Necesitas una
+                ventaja.</span> Nosotros no
+            solo construimos sitios web, creamos experiencias digitales inmersivas que cautivan a tus clientes y
+            catapultan
+            tu negocio hacia el éxito.</h3>
+    </div>
+    <div id="div-img-2">
+        @if(searchWeight() > 807) {
+        <img src="assets/images/people.png" class="img-2">
+        } @else {
+        <img src="assets/images/people-hori.png" class="img-2">
+        }
+    </div>
+
+</div>
+<div class="content-3">
+    <div id="title-service">
+        <h1 class="title">¿Listo para transformar tu presencia en línea? </h1>
+        <br>
+        <h2 class="sub-title">juntos haremos que tu negocio sea imparable con un desasrrollo a la medida. </h2>
+    </div>
+    <div id="services">
+        <div class="text-service">
+            <img src="assets/images/page-service.jpeg"  >
+            <div class="description">
+                Creación de aplicaiones o paginas web
+            </div>
+        </div>
+        <div class="text-service">
+            <img src="assets/images/movil-service.jpeg"  >
+            <div class="description">
+                Desarrollo de aplicaciones moviles
+            </div>
+        </div>
+        <div class="text-service">
+            <img src="assets/images/UX-UI-service.png"  >
+            <div class="description">
+                Diseño de interfaces digitales centradas en el usuario con UX/UI
+            </div>
+        </div>
+        <div class="text-service">
+            <img src="assets/images/desktop-service.jpeg"  >
+            <div class="description">
+                Aplicaciones de escritorio para gestion y control de procesos
+            </div>
+        </div>
+    </div>
+</div>
+<app-contact-me></app-contact-me>
+
+}
