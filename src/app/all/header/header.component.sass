@@ -19,7 +19,6 @@ h2
 
 .efect-typewriter
     display: block
-
     width: 14ch
     animation: typing 2s steps(14), blink .2s infinite step-end alternate
     overflow: hidden
@@ -29,6 +28,7 @@ h2
     width: 66%
     max-width: 750px
     justify-content: space-between
+    margin: 1px 0px
 
 #logo
     width: 30px
@@ -52,14 +52,12 @@ h2
 .header-pc
     align-items: center
     justify-content: space-between
-    padding-bottom: 2px
     border-radius: 50px
-    padding-right: 15px
+    padding: 2px 5px 2px 0px
     margin-top: 10px
-    background: var(--accent-color)
     background: linear-gradient(90deg, var(--dark-primary-color) 0%, var(--accent-color) 100%)
     font-family: var(--font-titel)
-    margin: 15px 15px 0px 15px
+    margin: 15px 15px 3px 15px
 
 .header-phone
     border-radius: 0px
@@ -76,9 +74,16 @@ h2
         border-color: transparent
 
 .call-to-action
-    background: var(--primary-color)
+    background: var(--dark-primary-color)
     padding: 0px 20px
     border-radius: 50px
+    display: flex
+    align-items: center
+
+    #logo
+        width: 40px
+        height: auto
+        filter: var(--filter-icons-text-icons)
 
 .btn
     letter-spacing: 0
@@ -114,18 +119,19 @@ h2
 
 @media (max-width: 976px)
     .header-pc
-        background: linear-gradient(90deg, var(--dark-primary-color) 0%, var(--accent-color) 100%)
+        background: var(--dark-primary-color)
+        box-shadow: var(--box-shadow)
         opacity: 1
         font-family: var(--font-titel)
-        width: min-content
+        width: 160px
         border-radius: 100px
-        margin-top: 16px
 
         #div-options, .call-to-action
             display: none
 
     .call-to-action
-        width: 55%
+        width: 100%
+        padding: 0px
 
     .div-bacground
         width: 100vw
@@ -144,8 +150,7 @@ h2
         transition: 0.5s
         position: fixed
         z-index: 99
-        background: var(--accent-color)
-        background: linear-gradient(90deg, var(--dark-primary-color) 0%, var(--accent-color) 100%)
+        background: var(--dark-primary-color)
         text-align: -webkit-center
 
     .header-phone
@@ -158,6 +163,6 @@ h2
         h1
             font-size: 42px
 
-@media (max-width: 680px)
-    h2
-        margin-left: -2px
+// @media (max-width: 680px)
+//     h2
+//         margin-left: -2px

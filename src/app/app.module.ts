@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SlickCarouselModule } from 'ngx-slick-carousel'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { TalkComponent } from './menu/talk/talk.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

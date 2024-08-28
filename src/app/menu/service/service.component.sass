@@ -1,0 +1,234 @@
+.main
+    //V2
+    // margin-top: -2px
+    margin-top: -10vh
+
+//V2
+#main-1
+    display: none
+
+.div-flex
+    margin: 15px 18px
+    background: rgba(255, 255, 255, 0.13)
+    padding: 50px 7%
+    border-radius: 20px
+
+.intro
+    width: 60%
+    height: auto
+
+.background
+    width: 40%
+    height: auto
+
+    img
+        width: 100%
+        height: auto
+h1
+    margin: 0px
+
+.sub-title
+    font-size: xxx-large
+
+.text-intro
+    font-size: 31px
+    line-height: 42px
+    font-weight: 700
+
+#text-intro-middle
+    width: 80%
+    margin: 100px auto
+    text-align: center
+    //V2
+    width: 100%
+    display: flex
+    height: 100vh
+    margin: 0px
+    background: #ffffff0f
+    background: var(--dark-primary-color)
+
+    p
+        margin: auto
+        width: 80%
+        
+
+.highlight
+    color: var(--primary-color)
+
+.title-service
+    min-width: min-content
+
+#WebApp, #UXUI
+    //V2
+    // background: transparent
+
+#MobileApp, #UXUI, #DesktopApp, #WebApp
+    //V2
+    // margin: 80px 18px
+    width: calc(100% - 14%)
+    background: transparent
+    // border-top: 1px solid var(--text-icons)
+    // border-bottom: 1px solid var(--text-icons)
+    margin: 0px 0px
+    padding: 50px 7%
+    border-radius: 0px
+    min-height: 100vh
+
+#div-service
+    margin: 15px 0px
+    border-radius: 0px
+    //V2
+    background: transparent
+
+#services
+    // width: 60%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .text-service
+        font-size: 1.2em
+        font-weight: 200
+        color: var(--text-color)
+        width: 300px
+        margin: 30px
+        background: var(--dark-primary-color)
+        border-radius: 20px
+        box-shadow: var(--box-shadow)
+        text-align: center
+        height: min-content
+
+    img
+        width: 100%
+        border-radius: 10px 10px 0px 0px
+        height: 155px
+        height: auto
+
+    .description
+        padding: 10px 20px
+
+.description-service
+    justify-content: space-between
+
+.div-img-service
+    width: 50%
+    height: auto
+
+    .allign-img
+        display: flex
+        justify-content: center
+
+        .img-service
+            width: 100%
+            height: auto
+
+        .video-lidarit
+            height: 500px
+            padding: 30px 30px
+
+.div-text-service
+    width: 35%
+
+    .sub-title
+        color: var(--primary-color)
+        font-size: xxx-large
+
+    .text-intro
+        font-size: xx-large
+        font-weight: 400
+        margin: 40px 0px
+
+    .div-right
+        float: right
+
+    .button-call-action
+        margin: 20px 0px
+        padding: 15px 40px
+
+.text-end
+    text-align: end
+
+#img-dev-web
+    flex-direction: column
+
+    img
+        padding: 15px 0px
+
+@media (max-width: 1310px)
+    #services
+        margin: 20px
+
+        .text-service
+            width: 250px
+
+            img
+                height: 125px
+
+    .div-flex
+        padding: 10px 3%
+
+@media (max-width: 1128px)
+    .div-flex
+        flex-direction: column
+        padding-bottom: 50px
+
+    #MobileApp, #DesktopApp
+        flex-direction: column-reverse
+
+    .text-end
+        text-align: start
+
+    .title
+        margin: 20px 0px 0px 0px
+
+    #services
+        .text-service
+            height: initial
+
+    .div-text-service
+        width: 100%
+        margin-bottom: 30px
+
+        .text-intro
+            margin-bottom: 0px
+
+        .button-call-action
+            margin: 20px auto
+
+        .div-right
+            width: 100%
+
+    .div-img-service
+        width: 65%
+        .allign-img
+            .video-lidarit
+                padding: 0px 30px
+
+    #img-2
+        display: none
+
+@media (max-width: 752px)
+    #services
+        .text-service
+            width: 100%
+
+            img
+                height: auto
+
+        .description
+            padding: 15px 20px 20px 20px
+            font-size: 128%
+
+@media (max-width: 425px)
+    #services
+        margin: 20px 0px
+
+        .text-service
+            margin: 30px 0px
+
+        .description
+            font-size: large
+
+    .title
+        font-size: xxx-large
+        text-align: center

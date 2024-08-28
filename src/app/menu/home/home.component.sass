@@ -7,18 +7,17 @@
     z-index: 1000
 
 .background
-    background: linear-gradient(179deg, var(--dark-primary-color) 60%, var(--accent-color) 100%)
-    // height: 91vh
-    // height: calc(91vh + 22px)
-    // min-height: 685px
-    // max-height: 800px
+    background: linear-gradient(179deg, var(--dark-primary-color) 60%, #000000 100%)
     height: 685px
 
     h3
         font-size: 44px
-        color: var(--text-icons)
         font-family: cursive
+        font-family: var(--font-text)
         margin: 0px
+        color: #CCCCCC
+        color: var(--accent-color)
+        color: var(--light-primaty-color)
 
     .div-flex
         justify-content: space-evenly
@@ -46,9 +45,10 @@
 
     h1
         margin-bottom: 5px
-        font-family: cursive
+        font-family: var(--font-title)
         font-size: 76px
         margin-top: -20px
+        color: var(--primary-color)
 
 #div-main-2
     width: 350px
@@ -57,6 +57,8 @@
 .img-init
     max-width: 645px
     height: auto
+    -webkit-filter: drop-shadow(5px 5px 5px var(--light-primary-color))
+    filter: drop-shadow(7px 5px 5px var(--light-primary-color))
 
 .div-subtitle
     width: min-content
@@ -66,11 +68,11 @@
     font-family: sans-serif
     display: flex
     justify-content: space-between
-    background: #ffffff14
+    // background: #ffffff14
     padding-bottom: 50px
 
     span
-        color: var(--accent-color)
+        color: var(--primary-color)
         font-weight: bold
 
     h2
@@ -101,7 +103,10 @@
 .content-3
     height: fit-content
     display: flex
-    margin-top: 70px
+    margin-top: 30px
+    margin-bottom: 50px
+    background: rgb(255 255 255 / 3%)
+    padding: 70px 0px
 
     #title-service
         width: 40%
@@ -114,11 +119,13 @@
             font-size: 66px
             line-height: 90px
             font-family: sans-serif
+            color: #ff7f00
 
         .sub-title
             font-size: 35px
             margin-top: 20px
             line-height: 65px
+            color: var(--text-icons)
 
     #services
         width: 60%
@@ -127,20 +134,21 @@
         justify-content: center
 
         .text-service
-            font-size: 24px
+            font-size: 1.2em
             font-weight: 200
-            color: var(--accent-color)
+            color: var(--text-color)
             width: 300px
-            margin: 30px 30px
+            margin: 30px
             background: var(--dark-primary-color)
             border-radius: 20px
-            box-shadow: 0px 0px 5px #202125, 0px 0px 5px #353535
-            // height: min-content
+            box-shadow: var(--box-shadow)
+            text-align: center
+            height: min-content
 
         img
             width: 100%
             border-radius: 10px 10px 0px 0px
-            min-height: 155px
+            height: 155px
 
         .description
             padding: 10px 20px

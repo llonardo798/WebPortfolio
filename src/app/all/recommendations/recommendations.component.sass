@@ -2,25 +2,22 @@
     margin-top: 10vh
     margin-bottom: 10vh
 
-.main
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-around
-    align-items: stretch
-    width: 92%
+.main-slider
     margin: auto
+    width: 1265px
+
+.slider
+    padding: 0px 10px
 
 section
     position: relative
-    min-width: 270px
-    width: 23%
-    height: auto
     background-color: var(--dark-primary-color)
-    box-shadow: 0px 0px 3px #202125, 0px 0px 3px #353535
+    box-shadow: var(--box-shadow)
     border-radius: 58px
     padding: 3rem 3rem 1rem 3rem
     margin: 10px
+    min-width: 304px
+    width: 304px
 
 .div-title
     margin-bottom: 30px
@@ -32,14 +29,11 @@ img
 .div-img
     display: flex
     align-items: center
-    margin-bottom: 20px
-
-.data-profesional
-    padding-left: 20px
 
 .div-profesional
     display: flex
     flex-direction: column
+    padding-left: 20px
 
 .name
     font-size: 22px
@@ -49,22 +43,32 @@ img
 .prof
     font-size: 17px
     font-weight: 700
-    color: var(--accent-color)
+    color: var(--primary-color)
 
 .title
     margin-left: 3%
 
 p
     font-family: arial
+    font-size: 15px
+    text-align: left
 
-@media (max-width: 740px)
-    .title
-        font-size: 9vw
+@media (max-width: 1274px)
+    .main-slider
+        width: 846px
 
-    .section
-        min-width: 247px
+@media (max-width: 862px)
+    .main-slider
+        width: 425px
+
+@media (max-width: 430px)
+    section
+        min-width: 200px
+        width: 200px
         padding: 2rem 22px
-        margin: 10px 0px
 
-    p
-        font-size: smaller
+    .main-slider
+        width: 269px
+    
+    .title
+        font-size: xxx-large

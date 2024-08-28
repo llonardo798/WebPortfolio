@@ -17,28 +17,30 @@
         <h2 class="btn" id="1"[routerLink]="['/portfolio']">&nbsp;Portafolio</h2>
         <h2 class="btn" id="1"[routerLink]="['/blog']">&nbsp;Blog</h2>
         <div class="call-to-action">
+            <!-- <img src="./assets/icons/mail.svg" alt="mail" id="logo"> -->
             <h2 class="btn" [routerLink]="['/contact']">Cotiza</h2>
         </div>
     </div>
 </div>
 } @else {
-<div id="header" class="div-flex header-pc">
-
-    <div class="div-flex" (click)="sidebar()">
-        <img src="./assets/images/dragon.png" alt="Logo" id="logo">
-        <!-- <img src="./assets/images/DragonWithoutBackground.png" alt="Logo" id="logo"> -->
-        <h2 id="name">Mítico Dev</h2>
+    <div id="header" class="div-flex header-pc">
+        
+        <div class="div-flex" (click)="sidebar()">
+            <img src="./assets/images/dragon.png" alt="Logo" id="logo">
+            <!-- <img src="./assets/images/DragonWithoutBackground.png" alt="Logo" id="logo"> -->
+            <h2 id="name">Mítico Dev</h2>
+        </div>
+        <div class="div-flex menu-options" id="div-options">
+            <h2 class="btn" [routerLink]="['/home']">&nbsp;Home</h2>
+            <h2 class="btn" [routerLink]="['/services']">&nbsp;Servicios</h2>
+            <h2 class="btn" [routerLink]="['/portfolio']">&nbsp;Portafolio</h2>
+            <h2 class="btn" [routerLink]="['/blog']">&nbsp;Blog</h2>
+        </div>
+        <div class="call-to-action">
+            <img src="./assets/icons/mail.svg" alt="mail" id="logo">
+            <h2 class="btn" [routerLink]="['/contact']">Cotiza</h2>
+        </div>
     </div>
-    <div class="div-flex menu-options" id="div-options">
-        <h2 class="btn" [routerLink]="['/home']">&nbsp;Home</h2>
-        <h2 class="btn" [routerLink]="['/services']">&nbsp;Servicios</h2>
-        <h2 class="btn" [routerLink]="['/portfolio']">&nbsp;Portafolio</h2>
-        <h2 class="btn" [routerLink]="['/blog']">&nbsp;Blog</h2>
-    </div>
-    <div class="call-to-action">
-        <h2 class="btn" [routerLink]="['/contact']">Cotiza</h2>
-    </div>
-</div>
 }
 }
 
