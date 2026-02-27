@@ -3,7 +3,6 @@
     <div class="div-info" id="div-rock">
         <span>Echo con mucho rock</span>
         <br>
-        <br>
         <span [innerHTML]="icon"></span>
     </div>
     <div class="div-info link-social" id="div-link">
@@ -15,7 +14,10 @@
         <span>Mítico Dev</span>
     </div>
     <div class="div-info" id="div-home">
-        <span>Home</span>
+        <button class="btn button-call-action" [routerLink]="['/contact']">
+            <img src="./assets/icons/mail.svg" alt="mail" id="logo">
+            <h2 class="btn" [routerLink]="['/contact']">Cotiza</h2>
+        </button>
     </div>
 </div>
 }

@@ -8,7 +8,9 @@ import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output } fro
 export class HeaderComponent implements OnInit {
   
   sideBarOpen = false;
-  startTyping = true;
+  //TODO - Reactive variable
+  // startTyping = true;
+  startTyping = false;
   words: string[] = ["Web", "Backend", "Movil "];
   currentWordIndex: number = 0;
   currentCharIndex: number = 0;
